@@ -12,10 +12,9 @@ log_list=file_read(file_path)
 log_count=len(log_list)
 
 """コンソール入力"""
-
-m=int(input("調べたい直近のログの数mを入力してください"))#最新から何個のデータをとるか
-print("\n")
 N=int(input("タイムアウト回数Nの上限を設定してください："))#タイムアウトは何回までしていいか
+print("\n")
+m=int(input("調べたい直近のログの数mを入力してください"))#最新から何個のデータをとるか
 print("\n")
 t=float(input("過負荷と認定する時間tを入力してください(単位はミリsec)"))#過負荷と認定する時間は何秒か
 
