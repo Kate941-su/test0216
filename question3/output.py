@@ -11,13 +11,21 @@ file_path=sys.argv[1]
 log_list=file_read(file_path)
 log_count=len(log_list)
 
+input_flag=True
 """コンソール入力"""
-N=int(input("タイムアウト回数Nの上限を設定してください："))#タイムアウトは何回までしていいか
+while(input_flag):
+    N=abs(int(input("タイムアウト回数Nの上限を設定してください：")))#タイムアウトは何回までしていいか
+    print("\n")
+    m=abs(int(input("調べたい直近のログの数mを入力してください")))#最新から何個のデータをとるか
+    print("\n")
+    if N<=m:
+        input_flag=False
+    else:
+        print("値はN<=mでなければなりません")
+        print("\n")
+    
+t=abs(float(input("過負荷と認定する時間tを入力してください(単位はミリsec)")))#過負荷と認定する時間は何秒か
 print("\n")
-m=int(input("調べたい直近のログの数mを入力してください"))#最新から何個のデータをとるか
-print("\n")
-t=float(input("過負荷と認定する時間tを入力してください(単位はミリsec)"))#過負荷と認定する時間は何秒か
-
 
 """サーバーのIPアドレスの種類を数える"""
 prefix_list=[]

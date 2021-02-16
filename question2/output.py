@@ -11,7 +11,7 @@ log_list=file_read(file_path)
 log_count=len(log_list)
 
 """コンソール入力"""
-N=int(input("タイムアウト回数Nの上限を設定してください："))#タイムアウトは何回までしていいか
+N=abs(int(input("タイムアウト回数Nの上限を設定してください：")))#タイムアウトは何回までしていいか
 print("\n")
 
 
